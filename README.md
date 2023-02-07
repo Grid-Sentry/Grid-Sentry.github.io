@@ -55,8 +55,8 @@ For importing to python code: **Import gspentest.iec61850**
 |Field              |   Information                          |
 |-----------------	|---------------------------------------	|
 | Deascription      | Given a certain GOOSE packet, the submodules can create a replica of the packet and modify the contents based on the user's requirements.|
-| **Parameters** : | **packet : dict** <br> Input is a dict type variable which containing one or multiple rows.
-**gocb : {str, ["str", …]}, default = None**Modify the gocb value in the packet. If a single packet is to be modified then string is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified
+| **Parameters** : | **packet : dict** <br> Input is a dict type variable which containing one or multiple rows. <br>
+**gocb : {str, ["str", …]}, default = None** <br> Modify the gocb value in the packet. If a single packet is to be modified then string is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified
 **Payload : array, default= None** The originally Payload is removed and this payload is attached. The size of old and new payload need not be same. If a single packet is to be modified then 1-d array is the input. If multiple packets need to be modified, then 2-D array is the input where number of elements matching the number of rows in dict. No change if not specified
 **stnum : {int, [int, …]}, default= None**Modify the stnum parameter. If a single packet is to be modified then int is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified
 **sqnum : {int, [int, …]}, default= None**Modify the sqnum parameter. If a single packet is to be modified then string is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified
