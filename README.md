@@ -34,10 +34,7 @@ For importing to python code: **Import gspentest.iec61850**
 ## goose.snoop(interface, t=1000) 
 |Field        |   Information                          |
 |-----------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-|**Description**    |   The module when ran captures the GOOSE messages flowing in the network for the time specified by the user. Since the GOOSE messages are multicast, the attacker system being on the same network can capture the packets sent by any device. 
-The time in seconds is to be specified by the user manually. The code identifies all the messages flowing in the network and only selects the GOOSE packets. 
-The function returns a dictionary type object with all the goose packets.
-These snooped packets can then be saved to a file as a PCAP or text file. Which can be accessed by the user. |
+|**Description**    |   The module when ran captures the GOOSE messages flowing in the network for the time specified by the user. Since the GOOSE messages are multicast, the attacker system being on the same network can capture the packets sent by any device.  <br> The time in seconds is to be specified by the user manually. The code identifies all the messages flowing in the network and only selects the GOOSE packets. <br> The function returns a dictionary type object with all the goose packets. <br> These snooped packets can then be saved to a file as a PCAP or text file. Which can be accessed by the user. |
 | **Parameters:** 	| **interface: string**<br>Specifies the network interface to start capturing messages on.<br>**t: int, default=100**<br>Time for which the packet are to be captured. Default 1 second 	|
 | **Returns**     	| **packet: dict**<br>Returns a dictionary containing all the GOOSE packets                                                                                                             	|
 | **Usage:**      	| out =goose.snoop(“eth0”, t=15000) <br>print(out) <br>>> {timestamp:[1.1, 1.2], length:[167,167], }                                                                                    	|
