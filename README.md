@@ -15,7 +15,7 @@ For importing to python code: **Import gspentest.iec61850**
 | mac\_to\_hex(mac\_id) | Convert mac id it to standard format 0xffffffffffff |
 
 ## mac\_to\_hex()
-| **Function name** | **Details** |
+| **Field** | **Details** |
 | --- | --- |
 |**Description** | The function is a private function, which can convert different types of mac address into the standard format of 0xffffffffffff.
 | **Parameters:** | mac\_id : string Specifies the the mac id in formats such as ff-ff-ff-ff-ff-ff, ff:ff:ff:ff:ff:ff, ff-ff-ff-ff-ff-ff/ ff-ff-ff-ff-ff-ff or ff:ff:ff:ff:ff:ff/ ff:ff:ff:ff:ff:ff |
