@@ -32,9 +32,11 @@ mac\_to\_hex()
 | goose.report() | Generate report for the goose packets received |
 
 goose.snoop(interface, t=1000) 
-| **Parameters:** |interface : string Specifies the network interface to start capturing messages on. t : int, default= 1000 Time for which the packets are to be captured. Default 1 seconds |
-| **Returns** : | packet: dict Returns a dictionary containing all the GOOSE packets |
-| **Usage:** | out =goose.snoop("eth0", t=15000)print(out)\>\> {timestamp:[1.1, 1.2], length:[167,167], } |
+|                 	|                                                                                                                                                                                       	|
+|-----------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| **Parameters:** 	| **interface: string**<br>Specifies the network interface to start capturing messages on.<br>**t: int, default=100**<br>Time for which the packet are to be captured. Default 1 second 	|
+| **Returns**     	| **packet: dict**<br>Returns a dictionary containing all the GOOSE packets                                                                                                             	|
+| **Usage:**      	| out =goose.snoop(“eth0”, t=15000) <br>print(out) <br>>> {timestamp:[1.1, 1.2], length:[167,167], }                                                                                    	|
 
 **goose.filter** (packet, src\_mac=0x000000000000/0x000000000000, dst\_mac=0x000000000000/0x000000000000, length=-1, capture\_time=[0, -1])
 
