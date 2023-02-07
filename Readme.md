@@ -80,4 +80,3 @@ For importing to python code: **Import gspentest.iec61850**
 | **Returns** : | **None** |
 | **Usage:** | **goose.push**(packet, "eth1", delay = 10)<br>**goose.push**(packet, "eth1", delay = [10, 15, 20]) |
 
-theme: minima
