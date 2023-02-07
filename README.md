@@ -45,10 +45,8 @@ For importing to python code: **Import gspentest.iec61850**
 
 |Field              |   Information                          |
 |-----------------	|---------------------------------------	|
-|**Description**    | The module picks up a dictionary and filters messages based on the Source MAC ID, Destination MAC ID, and length of the packet. The type of filter is to be specified by the user. 
-<br>
-The function returns a dictionary type object with all the goose packets filtered based on the type of filter. 
-<br>
+|**Description**    | The module picks up a dictionary and filters messages based on the Source MAC ID, Destination MAC ID, and length of the packet. The type of filter is to be specified by the user.<br>
+The function returns a dictionary type object with all the goose packets filtered based on the type of filter.<br>
 The packets can be saved as a PCAP file where the user can do further forensics on the packets. |
 
 | **Parameters:** 	| **packet : dict** The dictionary containg all goose packets on which the filter is to be applied 
