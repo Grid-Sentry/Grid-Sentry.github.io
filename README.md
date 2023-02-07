@@ -1,6 +1,5 @@
 # Grid-Sentry.github.io
 This is the documentation page for Grid sentry
-
 # API reference- gspentest.iec61850.goose
 
 For importing to python code: **Import gspentest.iec61850**
@@ -32,12 +31,11 @@ mac\_to\_hex()
 | goose.push() | Push the packet on the specified networking interface with time delay between packets |
 | goose.report() | Generate report for the goose packets received |
 
-**goose.snoop** (interface, t=1000)
-
+| **goose.snoop** (interface, t=1000) |
+| --- |
 | **Parameters:** | **interface : string** Specifies the network interface to start capturing messages on.
 **t : int, default= 1000** Time for which the packets are to be captured. Default 1 seconds |
-| --- | --- |
-| **Returns** : | packet: dictReturns a dictionary containing all the GOOSE packets |
+| **Returns** : | **packet: dict** Returns a dictionary containing all the GOOSE packets |
 | **Usage:** | out =goose.snoop("eth0", t=15000)print(out)\>\> {timestamp:[1.1, 1.2], length:[167,167], } |
 
 **goose.filter** (packet, src\_mac=0x000000000000/0x000000000000, dst\_mac=0x000000000000/0x000000000000, length=-1, capture\_time=[0, -1])
