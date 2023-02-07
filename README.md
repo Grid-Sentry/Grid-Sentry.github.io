@@ -16,7 +16,7 @@ For importing to python code: **Import gspentest.iec61850**
 
 mac\_to\_hex()
 
-| **Parameters:** | **mac\_id : string** Specifies the the mac id in formats such as ff-ff-ff-ff-ff-ff, ff:ff:ff:ff:ff:ff, ff-ff-ff-ff-ff-ff/ ff-ff-ff-ff-ff-ff or ff:ff:ff:ff:ff:ff/ ff:ff:ff:ff:ff:ff |
+| **Parameters:** | mac\_id : string Specifies the the mac id in formats such as ff-ff-ff-ff-ff-ff, ff:ff:ff:ff:ff:ff, ff-ff-ff-ff-ff-ff/ ff-ff-ff-ff-ff-ff or ff:ff:ff:ff:ff:ff/ ff:ff:ff:ff:ff:ff |
 | --- | --- |
 | **Returns** : | Mac\_id: hexReturns a hexadecimal number with the format 0xffffffffffff |
 | **Usage:** | out =mac\_to\_hex("ff:ff:ff:ff:ff:ff")print(out)\>\> 0xffffffffffff |
@@ -31,11 +31,10 @@ mac\_to\_hex()
 | goose.push() | Push the packet on the specified networking interface with time delay between packets |
 | goose.report() | Generate report for the goose packets received |
 
-| **goose.snoop** (interface, t=1000) |
-| --- |
-| **Parameters:** | **interface : string** Specifies the network interface to start capturing messages on.
-**t : int, default= 1000** Time for which the packets are to be captured. Default 1 seconds |
-| **Returns** : | **packet: dict** Returns a dictionary containing all the GOOSE packets |
+goose.snoop(interface, t=1000) 
+| **Parameters:** |interface : string Specifies the network interface to start capturing messages on.
+                   t : int, default= 1000 Time for which the packets are to be captured. Default 1 seconds |
+| **Returns** : | packet: dict Returns a dictionary containing all the GOOSE packets |
 | **Usage:** | out =goose.snoop("eth0", t=15000)print(out)\>\> {timestamp:[1.1, 1.2], length:[167,167], } |
 
 **goose.filter** (packet, src\_mac=0x000000000000/0x000000000000, dst\_mac=0x000000000000/0x000000000000, length=-1, capture\_time=[0, -1])
