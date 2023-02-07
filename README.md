@@ -39,12 +39,14 @@ For importing to python code: **Import gspentest.iec61850**
 | **Returns**     	| **packet: dict**<br>Returns a dictionary containing all the GOOSE packets                                                                                                             	|
 | **Usage:**      	| out =goose.snoop(“eth0”, t=15000) <br>print(out) <br>>> {timestamp:[1.1, 1.2], length:[167,167], }                                                                                    	|
 
-**goose.filter** (packet, src\_mac=0x000000000000/0x000000000000, dst\_mac=0x000000000000/0x000000000000, length=-1, capture\_time=[0, -1])
 
-| **Parameters:** | **packet : dict** The dictionary containg all goose packets on which the filter is to be applied
-**src\_mac : {"hex", "hex/hex\_mask", [hex, hex, hex,..]},** default=0x000000000000/0x000000000000Filter based on source mac id. Input can be single mac id(string), mac id with mask(string) and an array of mac ids(array of strings). Default value is all possible mac ids
-**dst\_mac : {"hex", "hex/hex\_mask", [hex, hex, hex,..]},** default=0x000000000000/0x000000000000Filter based on destination mac id. Input can be single mac id (string), mac id with mask(string) and an array of mac ids(array of strings). Default value is all possible mac ids
-**length : {int, [int, int]}, default=-1** Filter based on length of packet. Input can be integer, array of 2 integers. If an array is given, the first element corresponds to lower limit of length and the second corresponds to upper limit of length. Default value is -1 which specifies that all packets need to be selected.
+
+## goose.filter** (packet, src\_mac=0x000000000000/0x000000000000, dst\_mac=0x000000000000/0x000000000000, length=-1, capture\_time=[0, -1])
+
+| **Parameters:** | **packet : dict** The dictionary containg all goose packets on which the filter is to be applied <br>
+**src\_mac : {"hex", "hex/hex\_mask", [hex, hex, hex,..]},** default=0x000000000000/0x000000000000Filter based on source mac id. Input can be single mac id(string), mac id with mask(string) and an array of mac ids(array of strings). Default value is all possible mac ids <br>
+**dst\_mac : {"hex", "hex/hex\_mask", [hex, hex, hex,..]},** default=0x000000000000/0x000000000000Filter based on destination mac id. Input can be single mac id (string), mac id with mask(string) and an array of mac ids(array of strings). Default value is all possible mac ids <br>
+**length : {int, [int, int]}, default=-1** Filter based on length of packet. Input can be integer, array of 2 integers. If an array is given, the first element corresponds to lower limit of length and the second corresponds to upper limit of length. Default value is -1 which specifies that all packets need to be selected. <br>
 **capture\_time : {"float", ["float", "float"]}, default = [0,-1]**Filter base on capture time. Input can be float where one time is specified or array of 2 floats. If an array is given, the first element corresponds to lower limit of captured time and the second corresponds to upper limit of captured time. |
 | --- | --- |
 | **Returns** : | **packet : dict** |
