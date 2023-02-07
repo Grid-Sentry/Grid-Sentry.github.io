@@ -45,26 +45,8 @@ For importing to python code: **Import gspentest.iec61850**
 
 |Field              |   Information                          |
 |-----------------	|---------------------------------------	|
-|**Description**    | The module picks up a dictionary and filters messages based on the Source MAC ID, Destination MAC ID, and length of the packet. The type of filter is to be specified by the user.<br>
-The function returns a dictionary type object with all the goose packets filtered based on the type of filter.<br>
-The packets can be saved as a PCAP file where the user can do further forensics on the packets. |
-
-| **Parameters:** 	| **packet : dict** The dictionary containg all goose packets on which the filter is to be applied 
-<br>
-**src\_mac : {"hex", "hex/hex\_mask", [hex, hex, hex,..]},** default=0x000000000000/0x000000000000
-<br>
-Filter based on source mac id. Input can be single mac id(string), mac id with mask(string) and an array of mac ids(array of strings). Default value is all possible mac ids 
-<br>
-**dst\_mac : {"hex", "hex/hex\_mask", [hex, hex, hex,..]},** default=0x000000000000/0x000000000000 
-<br>
-Filter based on destination mac id. Input can be single mac id (string), mac id with mask(string) and an array of mac ids(array of strings). Default value is all possible mac ids 
-<br>
-**length : {int, [int, int]}, default=-1** 
-<br>
-Filter based on length of packet. Input can be integer, array of 2 integers. If an array is given, the first element corresponds to lower limit of length and the second corresponds to upper limit of length. Default value is -1 which specifies that all packets need to be selected. <br>
-**capture\_time : {"float", ["float", "float"]}, default = [0,-1]** Filter base on capture time. Input can be float where one time is specified or array of 2 floats.
-<br>
-If an array is given, the first element corresponds to lower limit of captured time and the second corresponds to upper limit of captured time. |
+|**Description**    | The module picks up a dictionary and filters messages based on the Source MAC ID, Destination MAC ID, and length of the packet. The type of filter is to be specified by the user.<br>The function returns a dictionary type object with all the goose packets filtered based on the type of filter.<br>The packets can be saved as a PCAP file where the user can do further forensics on the packets. |
+| **Parameters:** 	| **packet : dict** The dictionary containg all goose packets on which the filter is to be applied<br>**src\_mac : {"hex", "hex/hex\_mask", [hex, hex, hex,..]},** default=0x000000000000/0x000000000000<br>Filter based on source mac id. Input can be single mac id(string), mac id with mask(string) and an array of mac ids(array of strings). Default value is all possible mac ids<br>**dst\_mac : {"hex", "hex/hex\_mask", [hex, hex, hex,..]},** default=0x000000000000/0x000000000000 <br>Filter based on destination mac id. Input can be single mac id (string), mac id with mask(string) and an array of mac ids(array of strings). Default value is all possible mac ids<br>**length : {int, [int, int]}, default=-1** <br>Filter based on length of packet. Input can be integer, array of 2 integers. If an array is given, the first element corresponds to lower limit of length and the second corresponds to upper limit of length. Default value is -1 which specifies that all packets need to be selected.<br> **capture\_time : {"float", ["float", "float"]}, default = [0,-1]** Filter base on capture time. Input can be float where one time is specified or array of 2 floats.<br>If an array is given, the first element corresponds to lower limit of captured time and the second corresponds to upper limit of captured time. |
 | **Returns**     	|**packet : dict**    |
 | **Usage:**      	| Source mac format: 11:ff:06:30:01:01/11-ff-06-30-01-01/0x11ff06300101 **goose.filter** (packet, src\_mac=0x11ff06300101/0xffff000000000, length=167, capture\_time=[0, -1])	|
 
