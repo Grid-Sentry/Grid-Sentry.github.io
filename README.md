@@ -14,7 +14,7 @@ For importing to python code: **Import gspentest.iec61850**
 | --- | --- |
 | mac\_to\_hex(mac\_id) | Convert mac id it to standard format 0xffffffffffff |
 
-mac\_to\_hex()
+##mac\_to\_hex()
 
 | **Parameters:** | mac\_id : string Specifies the the mac id in formats such as ff-ff-ff-ff-ff-ff, ff:ff:ff:ff:ff:ff, ff-ff-ff-ff-ff-ff/ ff-ff-ff-ff-ff-ff or ff:ff:ff:ff:ff:ff/ ff:ff:ff:ff:ff:ff |
 | --- | --- |
@@ -31,10 +31,9 @@ mac\_to\_hex()
 | goose.push() | Push the packet on the specified networking interface with time delay between packets |
 | goose.report() | Generate report for the goose packets received |
 
-goose.snoop(interface, t=1000) 
-|                 	|                                                                                                                                                                                       	|
-|-----------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+##goose.snoop(interface, t=1000) 
 | **Parameters:** 	| **interface: string**<br>Specifies the network interface to start capturing messages on.<br>**t: int, default=100**<br>Time for which the packet are to be captured. Default 1 second 	|
+|-----------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 | **Returns**     	| **packet: dict**<br>Returns a dictionary containing all the GOOSE packets                                                                                                             	|
 | **Usage:**      	| out =goose.snoop(“eth0”, t=15000) <br>print(out) <br>>> {timestamp:[1.1, 1.2], length:[167,167], }                                                                                    	|
 
