@@ -32,6 +32,8 @@ For importing to python code: **Import gspentest.iec61850**
 | goose.push() | Push the packet on the specified networking interface with time delay between packets |
 | goose.report() | Generate report for the goose packets received |
 
+<br>
+<br>
 ### goose.snoop(interface, t=1000) 
 |Field        |   Information                          |
 |-----------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
@@ -40,7 +42,8 @@ For importing to python code: **Import gspentest.iec61850**
 | **Returns**     	| **packet: dict**<br>Returns a dictionary containing all the GOOSE packets                                                                                                             	|
 | **Usage:**      	| out =goose.snoop(“eth0”, t=15000) <br>print(out) <br>>> {timestamp:[1.1, 1.2], length:[167,167], }                                                                                    	|
 
-
+<br>
+<br>
 
 ### goose.filter(packet, src\_mac=0x000000000000/0x000000000000, dst\_mac=0x000000000000/0x000000000000, length=-1, capture\_time=[0, -1])
 |Field              |   Information                          |
@@ -50,6 +53,8 @@ For importing to python code: **Import gspentest.iec61850**
 | **Returns**     	|**packet : dict**    |
 | **Usage:**      	| Source mac formats: 11:ff:06:30:01:01/11-ff-06-30-01-01/0x11ff06300101<br>**goose.filter** (packet, src\_mac=0x11ff06300101/0xffff000000000, length=167, capture\_time=[0, -1])	|
 
+<br>
+<br>
 
 ### **goose.modify** (packet, gocb=None, payload=None, stnum=None, sqnum=None,capture\_time=None, src\_mac=None, dst\_mac=None, appid=None, length=none)
 |Field              |   Information                          |
@@ -58,6 +63,9 @@ For importing to python code: **Import gspentest.iec61850**
 | **Parameters** : | **packet : dict** <br> Input is a dict type variable which containing one or multiple rows. <br> **gocb : {str, ["str", …]}, default = None** <br> Modify the gocb value in the packet. If a single packet is to be modified then string is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified <br> **Payload : array, default= None** <br> The originally Payload is removed and this payload is attached. The size of old and new payload need not be same. If a single packet is to be modified then 1-d array is the input. If multiple packets need to be modified, then 2-D array is the input where number of elements matching the number of rows in dict. No change if not specified <br> **stnum : {int, [int, …]}, default= None**<br>Modify the stnum parameter. If a single packet is to be modified then int is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified <br> **sqnum : {int, [int, …]}, default= None**<br>Modify the sqnum parameter. If a single packet is to be modified then string is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified <br> **time : {float, [float, …]}, default = None**<br>Modify the timestamp in the packet. If a single packet is to be modified then string is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified <br> **src\_mac= {hex, [hex, …]}, default= None**<br>Modify the source mac id. If a single packet is to be modified then string is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified <br> **dst\_mac= {hex, [hex, …]}, default= None**<br>Modify the destination mac id. If a single packet is to be modified then string is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified <br> **appid: {int, [int, …]} default= None**<br>Modify the appid of the packet. If a single packet is to be modified then string is the input. If multiple packets need to be modified, then array is the input where number of elements matching the number of rows in dict. No change if not specified <br> **length: {int, "nochange", [int, …]}, default = None**<br>Custom change the length of the packet by specifying the integer length or enter string "no change" tokeep the original length. If not specified, the code automatically calculates the correct length of the packet and modifies it. If input packet has multiple rows, then array input is given.|
 | **Returns** : | **Packet:dict** |
 | **Usage:** | **goose.modify** (packet, gocb=IED3simpleIO$meas$GGIO.3, payload=[[True, True]], stnum=8, sqnum=150) <br> or <br> **goose.modify** (packet, gocb=IED3simpleIO$meas$GGIO.3, payload=[[True, True],[False, True],[False False]], stnum=[7,8,9] sqnum=[150,1,1]) |
+
+<br>
+<br>
 
 ### **goose.push** (packet, interface, delay = 100)
 |Field              |   Information                          |
