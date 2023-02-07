@@ -1,7 +1,7 @@
 <!-- ---
 layout: default
 --- -->
-# API reference  |  ## [User Guide](user_guide.md)
+# API reference  |  [User Guide](user_guide.md)
 # Grid-Sentry.github.io
 This is the documentation page for Grid sentry
 # API reference- gspentest.iec61850.goose
