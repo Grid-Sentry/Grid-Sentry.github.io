@@ -1,4 +1,3 @@
-theme: minima
 # Grid-Sentry.github.io
 This is the documentation page for Grid sentry
 # API reference- gspentest.iec61850.goose
@@ -77,3 +76,5 @@ For importing to python code: **Import gspentest.iec61850**
 | **Parameters** : | **packet: dict** <br>The dictionary of packet needed to be pushed in the network. <br> **Interface: str**<br>Networking interface to be used for pushing the packets <br> **Delay: {int, array}, default = 100ms**<br>Delay between the consecutive packets. The integer value in milliseconds is to be specified for constant time between the packets. An array of any size can be specified. The function will create a repeated array of size same as packet dict based on the delay array.|
 | **Returns** : | **None** |
 | **Usage:** | **goose.push**(packet, "eth1", delay = 10)<br>**goose.push**(packet, "eth1", delay = [10, 15, 20]) |
+
+theme: minima
