@@ -1,6 +1,7 @@
 <!-- ---
 layout: default
 --- -->
+[Temp](_config.yml)
 # Grid-Sentry.github.io
 This is the documentation page for Grid sentry
 # API reference- gspentest.iec61850.goose
