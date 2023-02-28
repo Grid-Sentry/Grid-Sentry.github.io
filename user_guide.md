@@ -1,4 +1,4 @@
-# Product guide- Penetration Testing (GOOSE module)
+# Product guide- Penetration Testing (GOOSE module) | [API Guide](readme.md)
 
 ### 1.	Application
 The VAPT GOOSE module provides a technique to snoop, filter, modify and inject GOOSE messages into the network.  The GOOSE module is designed for testing the network for protocol inconsistencies and cyber security.
