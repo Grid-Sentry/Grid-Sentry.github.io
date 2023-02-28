@@ -18,7 +18,7 @@ For importing to python code: **Import gspentest.iec61850**
 | --- | --- |
 | mac\_to\_hex(mac\_id) | Convert mac id it to standard format 0xffffffffffff |
 
-#### mac\_to\_hex()
+#### mac_to_hex()
 
 | **Field** | **Details** |
 | --- | --- |
