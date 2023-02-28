@@ -19,6 +19,7 @@ For importing to python code: **Import gspentest.iec61850**
 | mac\_to\_hex(mac\_id) | Convert mac id it to standard format 0xffffffffffff |
 
 #### mac\_to\_hex()
+
 | **Field** | **Details** |
 | --- | --- |
 |**Description** | The function is a private function, which can convert different types of mac address into the standard format of 0xffffffffffff.
@@ -41,6 +42,7 @@ For importing to python code: **Import gspentest.iec61850**
 
 
 #### goose.snoop(interface, t=1000) 
+
 |Field        |   Information                          |
 |-----------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 |**Description**    |   The module when ran captures the GOOSE messages flowing in the network for the time specified by the user. Since the GOOSE messages are multicast, the attacker system being on the same network can capture the packets sent by any device.  <br> The time in seconds is to be specified by the user manually. The code identifies all the messages flowing in the network and only selects the GOOSE packets. <br> The function returns a dictionary type object with all the goose packets. <br> These snooped packets can then be saved to a file as a PCAP or text file. Which can be accessed by the user. |
@@ -52,6 +54,7 @@ For importing to python code: **Import gspentest.iec61850**
 <br>
 
 #### goose.filter(packet, src\_mac=0x000000000000/0x000000000000, dst\_mac=0x000000000000/0x000000000000, length=-1, capture\_time=[0, -1])
+
 |Field              |   Information                          |
 |-----------------	|---------------------------------------	|
 |**Description**    | The module picks up a dictionary and filters messages based on the Source MAC ID, Destination MAC ID, and length of the packet. The type of filter is to be specified by the user.<br>The function returns a dictionary type object with all the goose packets filtered based on the type of filter.<br>The packets can be saved as a PCAP file where the user can do further forensics on the packets. |
@@ -63,6 +66,7 @@ For importing to python code: **Import gspentest.iec61850**
 <br>
 
 #### **goose.modify** (packet, gocb=None, payload=None, stnum=None, sqnum=None,capture\_time=None, src\_mac=None, dst\_mac=None, appid=None, length=none)
+
 |Field              |   Information                          |
 |-----------------	|---------------------------------------	|
 | **Deascription**      | Given a certain GOOSE packet, the submodules can create a replica of the packet and modify the contents based on the user's requirements.. The function allows the user to manually change the parameters of the packet.|
@@ -74,6 +78,7 @@ For importing to python code: **Import gspentest.iec61850**
 <br>
 
 #### **goose.push** (packet, interface, delay = 100)
+
 |Field              |   Information                          |
 |-----------------	|---------------------------------------	|
 | **Deascription**      | Given a packet, the submodule can be used to push it into the network without changing the source mac ID in the frame. Thus, the sending device’s MAC ID won’t be reflected on the frame. The function also allows the user to push the packet repeatedly into the network, to do so the user needs to provide the module with a time interval between two consecutive packets. The code doesn’t return any output, but the effect of the packet can be seen on the devices accepting the original messages. The network can also be scanned to see the packets sent by this module.|
